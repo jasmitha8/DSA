@@ -123,6 +123,12 @@ def QuickSort(nums, low, high):
 
 
 def HeapSort(nums):
+    """
+    T: O(nlogn)
+    S: O(logn)
+
+    Builds a max heap and sends the root to the end of the array
+    """
     def heapify(arr, n, i):
         """
         Return max heap
@@ -149,7 +155,7 @@ def HeapSort(nums):
         nums[0], nums[i] = nums[i], nums[0]     # Send the root to the end of the array because max
         heapify(nums, i, 0)     # Heapify the remaining array
 
-    return arr
+    return nums
 
 
 def OtherSort():
